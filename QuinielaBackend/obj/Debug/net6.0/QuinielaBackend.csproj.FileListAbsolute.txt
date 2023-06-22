@@ -164,3 +164,9 @@ C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\obj\Debug\net6.0\scope
 C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\obj\Debug\net6.0\QuinielaBackend.csproj.CopyComplete
 C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\obj\Debug\net6.0\QuinielaBackend.genruntimeconfig.cache
 C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\obj\Debug\net6.0\ref\QuinielaBackend.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Cors.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Http.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Http.Cors.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
