@@ -6,7 +6,7 @@ using System.Web.Http.Cors;
 
 namespace QuinielaBackend.Controllers
 {
-    [EnableCors(origins: "http://localhost:3000", headers: "*", methods: "*")]
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [Route("api/[controller]/[action]")]
     [ApiController]
     public class GameController : ControllerBase
@@ -42,8 +42,8 @@ namespace QuinielaBackend.Controllers
                     new WeekTable { Id = Guid.NewGuid(), Name = "Registro 13", Points = 7 }
                 };
 
-
-            return weekTableEnumerable;
+            
+            return weekTableEnumerable.OrderByDescending(wt => wt.Points); ;
         }
 
         // GET api/<GameController>/5
