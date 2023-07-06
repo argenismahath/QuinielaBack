@@ -73,7 +73,7 @@ namespace QuinielaBackend.Controllers
         }
 
         [HttpGet]
-        public async Task<IEnumerable<GetGameVM>> GetGamesByJorneys(int id, int userId=0)
+        public async Task<IEnumerable<GetGameVM>> GetGamesByJorneys(int id, int userId)
         {
             IEnumerable<GetGameVM> games = await new GamesManager(_DbContext).GetGamesByJorneys(id, userId);
             return games;

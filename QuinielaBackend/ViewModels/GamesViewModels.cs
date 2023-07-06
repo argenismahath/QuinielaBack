@@ -33,6 +33,7 @@ namespace QuinielaBackend.ViewModels
                 Lock = data.Lock,
                 TeamId1 = data.TeamId1,
                 TeamId2 = data.TeamId2,
+                Link = data.Link
             };
             return games;
         }
@@ -51,6 +52,8 @@ namespace QuinielaBackend.ViewModels
         public String img1 { get; set; }
         public String img2 { get; set; }
         public int? Points { get; set; }
-        public String Link { get; set; } 
+        public String Link { get; set; }
+        public String Name1 { get; set; }
+        public String Name2 { get; set; }
     }
 }

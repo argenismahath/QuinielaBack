@@ -34,13 +34,13 @@ namespace QuinielaBackend.Managers
             foreach (var game in dataGames)
             {
                 var img1 = await _DbContext.Teams
-                    .Where(r => r.Id == game.TeamId1)
-                    .Select(r => r.Img)
-                    .FirstOrDefaultAsync();
+                        .Where(r => r.Id == game.TeamId1)
+                        .Select(r => new { r.Img, r.Name })
+                        .FirstOrDefaultAsync();
 
                 var img2 = await _DbContext.Teams
                     .Where(r => r.Id == game.TeamId2)
-                    .Select(r => r.Img)
+                    .Select(r => new { r.Img, r.Name } )
                     .FirstOrDefaultAsync();
 
                 var query = (from Users in _DbContext.Users
@@ -61,12 +61,14 @@ namespace QuinielaBackend.Managers
                     gameVM.Lock = game.Lock;
                     gameVM.TeamId1 = game.TeamId1;
                     gameVM.TeamId2 = game.TeamId2;
-                    gameVM.img1 = img1;
-                    gameVM.img2 = img2;
+                    gameVM.img1 = img1.Img;
+                    gameVM.img2 = img2.Img;
                     gameVM.ScoreTeam1 = query?.propiedad3 ?? 0;
                     gameVM.ScoreTeam2 = game.ScoreTeam2;
                     gameVM.Points = 0;
                     gameVM.Link = game.Link;
+                    gameVM.Name1 = img1.Name;
+                    gameVM.Name2 = img2.Name;
                 }
                 // Aquí debes proporcionar el código específico para asignar los valores adecuados
                 getGameVMs = getGameVMs.Append(gameVM);
