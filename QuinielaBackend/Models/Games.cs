@@ -12,6 +12,7 @@
         public String GameTitle { get; set; }
         public int? ScoreTeam1 { get; set; }
         public int? ScoreTeam2 { get; set; }
+        public String? Link { get; set; }
         public IEnumerable<RecordTable> RecordsTables { get; set; }
         public IEnumerable<Teams> Teams { get; set; }
 

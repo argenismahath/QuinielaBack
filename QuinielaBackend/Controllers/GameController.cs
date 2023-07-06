@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using QuinielaBackend.Managers;
+using QuinielaBackend.Models;
 using QuinielaBackend.ViewModels;
 using System.Web.Http.Cors;
 
@@ -16,7 +18,7 @@ namespace QuinielaBackend.Controllers
 
         public GameController(DbContextQuiniela dbContext)
         {
-            _DbContext= dbContext;
+            _DbContext = dbContext;
         }
         #endregion
 
@@ -24,7 +26,7 @@ namespace QuinielaBackend.Controllers
         // GET: api/<GameController>
         [HttpGet]
         public IEnumerable<WeekTable> GetWeekTable()
-                    {
+        {
             IEnumerable<WeekTable> weekTableEnumerable = new List<WeekTable>
                 {
                     new WeekTable { Id = Guid.NewGuid(), Name = "Registro 1", Points = 10 },
@@ -42,27 +44,39 @@ namespace QuinielaBackend.Controllers
                     new WeekTable { Id = Guid.NewGuid(), Name = "Registro 13", Points = 7 }
                 };
 
-            
+
             return weekTableEnumerable.OrderByDescending(wt => wt.Points); ;
         }
 
         // GET api/<GameController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet]
+        public IEnumerable<JourneyTable> GetJourneys()
         {
-            return "value";
+            IEnumerable<JourneyTable> JourneyTableEnumerable = new List<JourneyTable>
+            {
+                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 1", number = 1 },
+                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 2", number = 2 },
+                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 3", number = 3 },
+            };
+
+            return JourneyTableEnumerable.OrderByDescending(Jt => Jt.number);
+
         }
 
         // POST api/<GameController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public async Task<bool> AddnewGame(CreateNewGame model)
         {
+            var gameData = new CreateNewGame().CreateNewGameVM(model);
+            var succes = await new GamesManager(_DbContext).AddNewGame(gameData);
+            return succes;
         }
 
-        // PUT api/<GameController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        [HttpGet]
+        public async Task<IEnumerable<GetGameVM>> GetGamesByJorneys(int id, int userId=0)
         {
+            IEnumerable<GetGameVM> games = await new GamesManager(_DbContext).GetGamesByJorneys(id, userId);
+            return games;
         }
 
         // DELETE api/<GameController>/5
@@ -70,5 +84,7 @@ namespace QuinielaBackend.Controllers
         public void Delete(int id)
         {
         }
+
+
     }
 }

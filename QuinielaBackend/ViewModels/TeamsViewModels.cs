@@ -35,4 +35,11 @@ namespace QuinielaBackend.ViewModels
         public String Name { get; set; }
         public int Points { get; set; }
     }
+    public class JourneyTable
+    {
+        public Guid Id { get; set; }
+        public String Name { get; set; }
+        public int number { get; set; }
+    }
+
 }
