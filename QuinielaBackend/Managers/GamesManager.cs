@@ -61,9 +61,10 @@ namespace QuinielaBackend.Managers
                     gameVM.Lock = game.Lock;
                     gameVM.TeamId1 = game.TeamId1;
                     gameVM.TeamId2 = game.TeamId2;
+                    gameVM.Points= query?.propiedad3 ?? 0;
                     gameVM.img1 = img1.Img;
                     gameVM.img2 = img2.Img;
-                    gameVM.ScoreTeam1 = query?.propiedad3 ?? 0;
+                    gameVM.ScoreTeam1 = game.ScoreTeam1;
                     gameVM.ScoreTeam2 = game.ScoreTeam2;
                     gameVM.Points = 0;
                     gameVM.Link = game.Link;
@@ -75,6 +76,15 @@ namespace QuinielaBackend.Managers
             };
 
             return getGameVMs;
+        }
+
+        public async Task<IEnumerable<Games>> GetLinkJorney()
+        {
+            var registrosSeleccionados = _DbContext.Games
+                .Where(g=>g.Link!=null)
+                  .GroupBy(r=> r.Link) // Agrupamos por el campo JorneyNumber
+                  .Select(grupo=>grupo.FirstOrDefault());
+            return registrosSeleccionados;
         }
     }
 }

@@ -36,9 +36,11 @@ namespace QuinielaBackend.Controllers
 
 
         // POST api/<GameController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpGet]
+        public async Task<IEnumerable<Teams>> GetTeams()
         {
+            IEnumerable<Teams> teams = await new TeamsManager(_DbContext).GetTeams();
+            return teams;
         }
 
         // PUT api/<GameController>/5

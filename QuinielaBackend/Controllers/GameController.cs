@@ -50,16 +50,17 @@ namespace QuinielaBackend.Controllers
 
         // GET api/<GameController>/5
         [HttpGet]
-        public IEnumerable<JourneyTable> GetJourneys()
+        public async Task<IEnumerable<Games>> GetJourneys()
         {
-            IEnumerable<JourneyTable> JourneyTableEnumerable = new List<JourneyTable>
-            {
-                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 1", number = 1 },
-                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 2", number = 2 },
-                    new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 3", number = 3 },
-            };
+            //    IEnumerable<JourneyTable> JourneyTableEnumerable = new List<JourneyTable>
+            //    {
+            //            new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 1", number = 1 },
+            //            new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 2", number = 2 },
+            //            new JourneyTable { Id = Guid.NewGuid(), Name = "Registro 3", number = 3 },
+            //    };
+            var data=await new GamesManager(_DbContext).GetLinkJorney();
 
-            return JourneyTableEnumerable.OrderByDescending(Jt => Jt.number);
+            return data;
 
         }
 
