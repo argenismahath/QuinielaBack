@@ -5,17 +5,14 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 <Project>
   <PropertyGroup>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
-    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsXTfaExV2U6mQvUn8tnF0QAAAAACAAAAAAAQZgAAAAEAACAAAADthiQqgDcJDDcw808DOKTRKQKaiKtYNaIN8x3SVgMYmgAAAAAOgAAAAAIAACAAAADy7uFlp9BakOYiCKYtO+dewSTdmiIxgiIpqCfx2Dp+ECAAAADaCwlW7qwlbwV26cUVUs3q8hzJZabtJDxhKSy4LF8nG0AAAADm3yWVQFtkBfLE7BeBd1vs7zGYw7XmrtN26O39HffV9FDHSpkEcAihinVBceJ0uJkkXS6p/y4j/bhzO/2U5Cb4</EncryptedPassword>
-    <_PublishTargetUrl>ftp://198.37.116.29/www.QuinielaAppBack.somee.com</_PublishTargetUrl>
-    <History>True|2023-07-07T16:58:27.9992750Z;False|2023-07-07T10:55:49.0670610-06:00;True|2023-07-06T21:14:15.0688706-06:00;False|2023-07-06T21:12:18.3909039-06:00;True|2023-07-06T21:06:47.7685810-06:00;</History>
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsXTfaExV2U6mQvUn8tnF0QAAAAACAAAAAAAQZgAAAAEAACAAAABa63PP5r6Lo7/hGgb57nG82SCv4JeZrwwC45iHjK6iZwAAAAAOgAAAAAIAACAAAAB9EvB0pGX3vwjpU7GdwFrnuGKLUoSqS/7h83FOGKVwniAAAACC0FyO3kWYnnxyZpHjKcXvHikd9VNzyiNwvnMh6cnxpEAAAAByNXiRO4yr4AO7MntojddCqEK+1Qz9W9jdC2X2G5c3Ej9nP3pZona9XuwT2cArH50nv/EmN3/eS3Lt9Vuta3OM</EncryptedPassword>
+    <_PublishTargetUrl>ftp://198.37.116.29/www.quinielaappback.somee.com</_PublishTargetUrl>
+    <History>False|2023-07-07T18:07:56.2314200Z;True|2023-07-07T12:02:13.3738547-06:00;True|2023-07-07T11:07:24.2761831-06:00;</History>
     <LastFailureDetails />
   </PropertyGroup>
   <ItemGroup>
     <File Include="appsettings.json">
-      <publishTime>07/07/2023 10:54:46</publishTime>
-    </File>
-    <File Include="appsettings.production.json">
-      <publishTime>07/07/2023 10:56:48</publishTime>
+      <publishTime>07/07/2023 15:52:59</publishTime>
     </File>
     <File Include="Microsoft.AspNetCore.Authentication.JwtBearer.dll">
       <publishTime>06/18/2023 23:56:54</publishTime>
@@ -72,16 +69,16 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>03/20/2017 14:03:18</publishTime>
     </File>
     <File Include="QuinielaBackend.deps.json">
-      <publishTime>07/07/2023 10:56:48</publishTime>
+      <publishTime>07/10/2023 10:11:07</publishTime>
     </File>
     <File Include="QuinielaBackend.dll">
-      <publishTime>07/07/2023 10:56:44</publishTime>
+      <publishTime>07/10/2023 10:11:06</publishTime>
     </File>
     <File Include="QuinielaBackend.exe">
-      <publishTime>07/07/2023 10:56:44</publishTime>
+      <publishTime>07/10/2023 10:11:07</publishTime>
     </File>
     <File Include="QuinielaBackend.pdb">
-      <publishTime>07/07/2023 10:56:44</publishTime>
+      <publishTime>07/10/2023 10:11:06</publishTime>
     </File>
     <File Include="QuinielaBackend.runtimeconfig.json">
       <publishTime>07/07/2023 10:55:36</publishTime>
@@ -168,12 +165,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>11/15/2019 02:56:52</publishTime>
     </File>
     <File Include="web.config">
-      <publishTime>07/07/2023 10:56:48</publishTime>
+      <publishTime>07/10/2023 10:11:08</publishTime>
     </File>
-  </ItemGroup>
-  <ItemGroup>
-    <DestinationConnectionStrings Include="DefaulConnection">
-      <Value>workstation id=a11Quiniela.mssql.somee.com%3bpacket size=4096%3buser id=OleiderCode_SQLLogin_1%3bpwd=1n8zw5gfg6%3bdata source=a11Quiniela.mssql.somee.com%3bpersist security info=False%3binitial catalog=a11Quiniela</Value>
-    </DestinationConnectionStrings>
   </ItemGroup>
 </Project>

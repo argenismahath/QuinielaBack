@@ -13,7 +13,8 @@ builder.Services.AddCors(options =>
     options.AddPolicy(name: MyAllowSpecificOrigins,
                       policy =>
                       {
-                          policy.WithOrigins("http://localhost:3000")
+                          policy.WithOrigins("http://localhost:3000");
+                          policy.WithOrigins("https://resplendent-stardust-a71504.netlify.app")
                           .AllowAnyHeader() // Permitir cualquier encabezado
                                 .AllowAnyMethod(); // Permitir cualquier método HTTP
                       });

@@ -171,3 +171,10 @@ C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Http.Cors.dl
 C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
 C:\Argenis\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Cors.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\System.Web.Http.Cors.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\LENOVO\source\repos\QuinielaBack\QuinielaBackend\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
